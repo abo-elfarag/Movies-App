@@ -1,0 +1,104 @@
+
+
+.videosSection {
+    position: relative;
+    margin-bottom: 50px;
+}
+.sectionHeading {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 25px;
+}
+.videos {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+}
+.videoItem {
+    width: 25%;
+    flex-shrink: 0;
+    cursor: pointer;
+    /* 720 w-150px */
+}
+.videoThumbnail {
+    margin-bottom: 15px;
+    position: relative;
+}
+.videoThumbnail Img{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: all 0.7s ease-in-out;
+}
+.PlayIcon svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+}
+.PlayIcon .triangle {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: white;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out;
+}
+.PlayIcon .circle {
+    stroke: white;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 1300;
+    transition: all 0.5s ease-in-out;
+}
+.PlayIcon:hover img {
+    opacity: 0.5;
+}
+.PlayIcon:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: var(--pink);
+    animation: trailorPlay 0.7s ease-in-out;
+}
+.PlayIcon:hover .circle {
+    stroke-dashoffset: 0;
+    stroke: var(--pink);
+}
+.videoTitle {
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+}
+.videoSkeleton {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    }
+
+    @media screen and  (max-width: 720px){
+        .videoTitle {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .videoSkeleton {
+            gap: 10px;
+            margin-right: -20px;
+            margin-left: -20px;
+            padding: 0 20px;
+            }
+            .videos {
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+                margin-right: -20px;
+                margin-left: -20px;
+                padding: 0 20px;
+            }
+            .videoItem {
+                width: 150px;
+            }
+    }

@@ -1,0 +1,215 @@
+
+.detailsBanner{
+    width: 100%;
+    background-color: var(--black);
+    padding-top: 120px;
+    margin-bottom: 0px;
+    min-height: 700px;
+}
+.backdropImg{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    overflow: hidden;
+}
+.opacityLayer{
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg,rgba(4, 21, 45, 0) 0%,#04152d 79.17%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.content{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 50px;
+}
+.left{
+    flex-shrink: 0;
+}
+.posterImg{
+    max-width: 350px;
+    display: block;
+    border-radius: 12px;
+}
+.right{
+    color: white;
+}
+.title{
+    font-size: 24px;
+    line-height: 40px;
+}
+.subtitle{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-style: italic;
+    opacity: 0.5;
+}
+.overview{
+    margin-bottom: 25px;
+}
+.heading{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.description{
+    line-height: 24px;
+    padding-right: 100px;
+}
+.playbtn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.text{
+    font-size: 16px;
+    transition: all 0.7s ease-in-out;
+}
+.text:hover {
+    color: var(--pink);
+}
+.row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    width: 40%;
+}
+.info {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    display: flex;
+}
+.infoItem {
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.infoText{
+    margin-right: 10px;
+    opacity: 0.5;
+    line-height: 24px;
+}
+/* class to bold & opacity */
+.BO{
+    font-weight: 600;
+    opacity: 1;
+}
+.detailsBannerSkeleton{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 50px;
+}
+.contentWrapper {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.skeletonLeft{
+    flex-shrink: 0;
+    max-width: 350px;
+            display: block;
+            border-radius: 12px;
+            aspect-ratio: 1/1.5;
+}
+.skeletonRight{
+    width: 100%;
+}
+.skeletonRow{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+.skeletonRow:nth-child(2) {
+    width: 75%;
+    margin-bottom: 50px;
+}
+.skeletonRow:nth-child(5) {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+
+svg {
+    width: 80px;
+}
+.circle {
+    stroke: white;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 1300;
+    transition: all 0.5s ease-in-out;
+}
+.triangle {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: white;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out;
+}
+.playbtn:hover .text{
+        color: var(--pink);
+}
+.playbtn:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: var(--pink);
+    animation: trailorPlay 0.7s ease-in-out;
+}
+.playbtn:hover .circle {
+    stroke-dashoffset: 0;
+    stroke: var(--pink);
+}
+@media screen and  (max-width: 900px){
+    .description{
+        line-height: 22px;
+        padding-right: 20px;
+    }
+    
+}
+@media screen and  (max-width: 720px){
+    .description{
+        line-height: 22px;
+        padding-right: 20px;
+    }
+    .content{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .detailsBanner{
+        padding-top: 80px;
+        margin-bottom: 50px;
+        min-height: 0px;
+    }
+    .posterImg{
+        max-width: 80%;
+        display: block;
+        border-radius: 12px;
+        margin: auto;
+    }
+    .subtitle{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .detailsBannerSkeleton{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .skeletonLeft{
+        max-width: 80%;
+    }
+    svg {
+        width: 60px;
+    }
+}
